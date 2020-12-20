@@ -18,14 +18,14 @@ public class Main {
         connection.start();
         connection.createSession(true);
         SessionImpl session = new SessionImpl();
-        String str = "myQueue";
+        String str = "HomeworkSession";
         DestinationImpl destination = new DestinationImpl(str);
         ProducerImpl producer = new ProducerImpl(destination);
         List<String> lines = null;
         try {
             lines = Files.readAllLines(Paths.get(args[0]));
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException err) {
+            err.printStackTrace();
         }
 
         while (true) {
@@ -39,7 +39,5 @@ public class Main {
                 }
             }
         }
-        //session.close();
-        //connection.close();
     }
 }
