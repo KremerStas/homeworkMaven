@@ -11,11 +11,6 @@
 # Mac
 .DS_Store
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.log
 
 out
 build
